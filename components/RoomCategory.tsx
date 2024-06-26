@@ -1,3 +1,5 @@
+'use client'
+
 import { IRoomCategory } from '../types/api';
 import { Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
 

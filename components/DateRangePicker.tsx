@@ -1,4 +1,7 @@
-import { DateRangePicker as MUIDateRangePicker, DateRange } from '@mui/x-date-pickers-pro';
+'use client'
+
+import { DateRangePicker } from '@mui/x-date-pickers-pro/DateRangePicker';
+import { DateRange } from "@mui/x-date-pickers-pro"
 import { TextField } from '@mui/material';
 import { useState } from 'react';
 
@@ -6,7 +9,7 @@ interface DateRangePickerProps {
   onChange: (dateRange: DateRange<Date>) => void;
 }
 
-const DateRangePicker = ({ onChange }: DateRangePickerProps) => {
+const DateRangePickerComponent = ({ onChange }: DateRangePickerProps) => {
   const [value, setValue] = useState<DateRange<Date>>([null, null]);
 
   const handleDateChange = (newValue: DateRange<Date>) => {
@@ -15,7 +18,7 @@ const DateRangePicker = ({ onChange }: DateRangePickerProps) => {
   };
 
   return (
-    <MUIDateRangePicker
+    <DateRangePicker
       startText="Start Date"
       endText="End Date"
       value={value}
@@ -30,4 +33,4 @@ const DateRangePicker = ({ onChange }: DateRangePickerProps) => {
   );
 };
 
-export default DateRangePicker;
+export default DateRangePickerComponent;
